@@ -1,0 +1,13 @@
+[package]
+name = "inject"
+version = "0.0.0"
+edition = "2021"
+
+[target.'cfg(windows)'.dependencies]
+inject-win = { path = "../inject-win" }
+
+[target.'cfg(unix)'.dependencies]
+inject-nix = { path = "../inject-nix" }
+
+[target.'cfg(osx)'.dependencies]
+inject-mac = { path = "../inject-mac" }
